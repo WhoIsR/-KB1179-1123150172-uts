@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'splash_screen2.dart';
+import 'package:uts_flutter/screen/splash_screen3.dart';
 
-class SplashScreen1 extends StatelessWidget {
-  const SplashScreen1({super.key});
+class SplashScreen2 extends StatelessWidget {
+  const SplashScreen2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class SplashScreen1 extends StatelessWidget {
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
-                  image: AssetImage("assets/images/hw3.png"),
+                  image: AssetImage("assets/images/hw2.png"),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -25,7 +25,7 @@ class SplashScreen1 extends StatelessWidget {
             SizedBox(height: 30),
 
             Text(
-              "Malam Telah Tiba...",
+              "Jangan Takut!",
               style: TextStyle(
                 fontSize: 26.0, // Ukuran besar
                 fontWeight: FontWeight.bold,
@@ -35,7 +35,7 @@ class SplashScreen1 extends StatelessWidget {
             SizedBox(height: 10),
 
             Text(
-              "Para hantu mulai berkeliaran.\nSiap untuk trick or treat?",
+              "Kami punya peta rahasia\nmenuju permen paling enak!",
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 14.0, color: Colors.deepOrange),
             ),
@@ -50,7 +50,7 @@ class SplashScreen1 extends StatelessWidget {
                   height: 10,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Colors.deepOrange,
+                    color: Color(0xFFedede9),
                   ),
                 ),
                 const SizedBox(width: 10),
@@ -59,7 +59,7 @@ class SplashScreen1 extends StatelessWidget {
                   height: 10,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Color(0xFFedede9),
+                    color: Colors.deepOrange,
                   ),
                 ),
                 const SizedBox(width: 10),
@@ -84,7 +84,7 @@ class SplashScreen1 extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => SplashScreen2()),
+                      MaterialPageRoute(builder: (context) => SplashScreen3()),
                     );
                   },
                   style: ElevatedButton.styleFrom(
