@@ -6,11 +6,12 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.all(20.0),
-          child: Center(
+      body: Center(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
             child: Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 SizedBox(height: 10),
                 Icon(
@@ -76,6 +77,14 @@ class Login extends StatelessWidget {
                     ),
                   ),
                 ),
+                SizedBox(height: 20),
+                TextButton(
+                  onPressed: () {
+                    //todo
+                  },
+                  child: const Text('Lupa Password?'),
+                ),
+                SizedBox(height: 8),
               ],
             ),
           ),
