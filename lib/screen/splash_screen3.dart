@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uts_flutter/screen/login.dart';
 
 class SplashScreen3 extends StatelessWidget {
   const SplashScreen3({super.key});
@@ -11,12 +12,13 @@ class SplashScreen3 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              width: 160,
-              height: 160,
+              width: 190,
+              height: 190,
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
+                color: Colors.deepOrange,
                 image: DecorationImage(
-                  image: AssetImage("assets/images/hw3.png"),
+                  image: AssetImage("assets/images/hw1.png"),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -31,7 +33,7 @@ class SplashScreen3 extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: 10),
+            SizedBox(height: 5),
 
             Text(
               "Ayo mulai petualanganmu\ndan kumpulkan semuanya!",
@@ -39,7 +41,7 @@ class SplashScreen3 extends StatelessWidget {
               style: TextStyle(fontSize: 14.0, color: Colors.deepOrange),
             ),
 
-            const SizedBox(height: 25),
+            const SizedBox(height: 60),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -81,7 +83,11 @@ class SplashScreen3 extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    //Todo call next Pages
+                    Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(builder: (context) => Login()),
+                      (Route<dynamic> route) => false,
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.deepOrange,

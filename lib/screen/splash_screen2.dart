@@ -12,8 +12,8 @@ class SplashScreen2 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              width: 160,
-              height: 160,
+              width: 210,
+              height: 210,
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
@@ -32,7 +32,7 @@ class SplashScreen2 extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: 10),
+            SizedBox(height: 5),
 
             Text(
               "Kami punya peta rahasia\nmenuju permen paling enak!",
@@ -40,7 +40,7 @@ class SplashScreen2 extends StatelessWidget {
               style: TextStyle(fontSize: 14.0, color: Colors.deepOrange),
             ),
 
-            const SizedBox(height: 25),
+            const SizedBox(height: 60),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
