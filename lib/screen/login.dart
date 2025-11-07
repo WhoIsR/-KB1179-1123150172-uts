@@ -13,7 +13,11 @@ class Login extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: 10),
-                Icon(Icons.vpn_key, size: 100, color: Colors.deepOrange),
+                Icon(
+                  Icons.nightlight_round,
+                  size: 100,
+                  color: Colors.deepOrange,
+                ),
                 SizedBox(height: 10),
                 Text(
                   "Selamat Datang, Makhluk Malam!",
@@ -29,9 +33,33 @@ class Login extends StatelessWidget {
                 TextField(
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
-                    labelText: 'Nama Lengkap',
-                    hintText: 'Masukkan nama lengkapmu',
-                    prefixIcon: const Icon(Icons.person_outline),
+                    labelText: 'Email',
+                    hintText: 'Masukkan email kamu',
+                    prefixIcon: const Icon(Icons.email_outlined),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12.0),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: BorderSide(color: Colors.grey[300]!),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: BorderSide(
+                        color: Colors.blueAccent,
+                        width: 2,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 16),
+                TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    labelText: 'Password',
+                    hintText: 'Masukkan password kamu',
+                    prefixIcon: const Icon(Icons.lock_outline),
+                    suffixIcon: const Icon(Icons.visibility_off),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12.0),
                     ),
