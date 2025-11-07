@@ -53,7 +53,7 @@ class Login extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 16),
+                SizedBox(height: 14),
                 TextField(
                   obscureText: true,
                   decoration: InputDecoration(
@@ -77,14 +77,34 @@ class Login extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 1),
                 TextButton(
                   onPressed: () {
                     //todo
                   },
                   child: const Text('Lupa Password?'),
                 ),
-                SizedBox(height: 8),
+
+                const SizedBox(height: 15),
+                Container(
+                  margin: EdgeInsets.only(left: 40, right: 40),
+                  child: SizedBox(
+                    height: 40,
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        //todo
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.deepOrange,
+                      ),
+                      child: Text(
+                        "SIGN IN",
+                        style: TextStyle(fontSize: 14, color: Colors.white),
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
