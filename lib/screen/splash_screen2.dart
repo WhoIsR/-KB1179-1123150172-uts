@@ -100,6 +100,15 @@ class SplashScreen2 extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: SizedBox(
+        height: 36,
+        child: Center(
+          child: Text(
+            "1123150172",
+            style: TextStyle(fontSize: 12, color: Colors.black54),
+          ),
+        ),
+      ),
     );
   }
 }

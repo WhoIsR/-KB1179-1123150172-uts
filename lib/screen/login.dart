@@ -113,10 +113,15 @@ class Login extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 5),
                   TextButton(
                     onPressed: () {
-                      //todo
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SplashScreen1(),
+                        ),
+                      );
                     },
                     child: Text('Lupa Password?'),
                     style: TextButton.styleFrom(
@@ -124,7 +129,7 @@ class Login extends StatelessWidget {
                     ),
                   ),
 
-                  SizedBox(height: 10),
+                  SizedBox(height: 20),
                   Container(
                     margin: EdgeInsets.only(left: 40, right: 40),
                     child: SizedBox(
@@ -132,12 +137,7 @@ class Login extends StatelessWidget {
                       width: double.infinity,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => SplashScreen1(),
-                            ),
-                          );
+                          //todo: login action
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.black,
@@ -151,6 +151,27 @@ class Login extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+          ),
+        ),
+      ),
+      // Footer memakai gradient yang sama supaya terlihat menyatu dengan background
+      bottomNavigationBar: SafeArea(
+        top: false,
+        child: Container(
+          height: 36,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              stops: [0.1, 1.0],
+              colors: [Color.fromARGB(255, 238, 137, 107), Colors.deepOrange],
+            ),
+          ),
+          child: Center(
+            child: Text(
+              "1123150172",
+              style: TextStyle(fontSize: 12, color: Colors.black54),
             ),
           ),
         ),
